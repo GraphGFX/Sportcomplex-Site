@@ -1,0 +1,12 @@
+.body{
+	background-color:grey;
+}
+.row{
+	background-color: white;
+	padding:100px 20px;
+	margin:200px;
+	border: 1px solid black;
+	border-radius: 50px;
+	text-align: center;
+
+}

@@ -1,0 +1,346 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+/*
+font-family: 'DM Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+:root {
+    --blackpure: #000;
+    --black: #171718;
+    --light-black: #333333;
+    --black-border: #26292D;
+    --white: #fff;
+    --purple: #5C62EC;
+
+
+    --page-bg: var(--white);
+    --text-color: var(--black);
+
+    --dark-bg: var(--black);
+    --dark-border: var(--black-border);
+    --header-text: var(--white);
+    --accent: var(--purple);   
+}
+
+
+
+/* General */
+
+.body{
+    
+}
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+}
+.section {
+        padding: 40px 0;
+        background-image: url("../img/graybg.png");
+    }
+
+
+/* Nav */
+
+.nav {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--dark-border);
+    background-color: var(--dark-bg);
+    color: var(--header-text);
+    letter-spacing: normal;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-right: auto;
+    color: var(--header-text);
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo strong {
+    font-weight: 700;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    align-items: center;
+    column-gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-list__link {
+    color: var(--header-text);
+    transition: opacity 0.2s ease-in;
+}
+
+.nav-list__link:hover {
+    opacity: 0.8;
+}
+
+.nav-list__link--active {
+    position: relative;
+}
+
+.nav-list__link--active::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent);
+}
+
+
+/* Header */
+
+.header {
+    padding: 200px 0;
+    max-height: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--page-bg);
+    background-image: url("../img/pexels-mike-1171084_1.jpg"), url("../img/pexels-mike-1171084_2.jpg");
+    background-size:50%,50%;
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.join{
+    position:absolute;
+    padding:50px 150px;
+    top:100px;
+    border-radius: 15px;
+
+
+    background-color: var(--light-black);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: all 0.05s ease;
+}
+.join:hover{    
+    background-color: var(--black);
+}
+.join:active{
+    transform: scale(0.7);
+
+}
+a{
+    color:white;
+}
+
+.strings{
+    padding: 105px 0px; /*952*/
+    border-top: 7px solid;
+    border-bottom: 7px solid;
+    border-color: #364f6b;
+    position:absolute;
+
+    width: 0%; /* задаем начальную ширину блока равной 0 */
+    transition: all 3s ease; /* добавляем анимацию изменения ширины блока */
+}
+.strings.loaded {
+  width: 100%;
+  background-color: white;
+}
+
+.img-bg{
+    position:static;
+    z-index: 9999;
+}
+
+/* Sports */
+
+.title-1{
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size:40px;
+    color:white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#sport{max-width:  1500px;}
+.sports{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+
+}
+.sport{
+    max-width: 400px;
+    background-color: var(--project-card-bg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+    border:1px solid;
+}
+
+.sport_img {
+    border-radius: 50px;
+    background-color: var(--light-black);
+}
+.project__title {
+    text-align: center;
+    padding: 15px 20px 25px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--project-card-text);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+}
+.descipt_sport{
+    display: block;
+    font-family: "Montserrat", Sans-serif;
+
+
+        color: #fff; /* Белый цвет текста */
+        font-size: 16px; /* Размер шрифта */
+        font-weight: bold; /* Жирное начертание шрифта */
+        letter-spacing: 1px; /* Расстояние между буквами */
+        line-height: 1.5; /* Высота строки */
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Тень для текста */
+
+    padding: 10px;
+}
+
+                                    //POOL//
+.pool{
+    padding: 200px 0;
+}
+.pool_bg{
+    margin: 0px 200px;
+    padding:410px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background-image: url("../img/Pool.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.dance_bg{
+    margin: 0px 200px;
+    padding:410px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background-image: url("../img/dance.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.yoga_massage_bg{
+    margin: 0px 250px 0 550px;
+    padding:100px 0 400px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+ 
+                                    // clearfix
+.image-stack::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+.image-stack__item--top {
+    float: right;
+    width: 110%;
+    margin-right: 30%;
+    margin-bottom: -100%;
+    padding-top: 15%; // arbitrary
+    position: relative;
+    z-index: 1;
+}
+
+.image-stack__item--bottom {
+    float: left;
+    width: 100%;
+}
+
+img.img {
+  width: 100%;
+}
+                                    /*FOOTER*/
+
+.site-footer {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contact-info, .opening-hours {
+  width: 50%;
+}
+
+.contact-info h4, .opening-hours h4, .social-media h4 {
+  margin-bottom: 10px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media ul li a {
+  color: #333;
+  font-size: 20px;
+}
+
+.legal-info {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
